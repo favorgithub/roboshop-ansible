@@ -6,4 +6,4 @@
   tasks:
     - name: Load NodeJS
       ansible.builtin.include_tasks:
-        file:nodejs.yml
+        file: nodejs.yml
