@@ -4,7 +4,7 @@
 - name: install NodeJS
   ansible.builtin.yum:
     name: nodejs
-    state: latest
+    state: installed
 
 
 #  echo -e "${color} Configuring NodeJS Repos ${nocolor}"
