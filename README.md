@@ -80,3 +80,8 @@ YAML
 4. Based on the program you are dealing, keys are provided by program and we have to fill those values as per our requirements
 5. same cases we create our own keys mainly variables
 6. some cases the values also will be provided and we have to choose only one of them
+
+things to know
+1. How do you declara variable in ansible
+2. We have NFs in our config cos we want to keep the code dry but how do we call these nfs in our ansible
+3. 
