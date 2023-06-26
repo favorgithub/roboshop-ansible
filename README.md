@@ -94,3 +94,13 @@ things to know
 # at the play level with the roles option: This is the classic way of using roles in a play.
 # at the tasks level with include_role: You can reuse roles dynamically anywhere in the tasks section of a play using include_role.
 # at the tasks level with import_role: You can reuse roles statically anywhere in the tasks section of a play using import_role.
+
+
+# google 
+# include_role
+# import_role
+
+
+Variable in ansible
+if there is a value before the variable then you will not use double curly braces
+if there is no value in front of the variable then you use double curly braces

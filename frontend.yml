@@ -9,4 +9,7 @@
 
 
 
-##[ centos@workstation ~/roboshop-ansible ]$ ansible-playbook -i frontend-dev.devopsblessed.store, frontend.yml -e ansible_user=centos -e ansible_password=DevOps321
+## ansible-playbook -i frontend-dev.devopsblessed.store, frontend.yml -e ansible_user=centos -e ansible_password=DevOps321
+## ansible-playbook  -i frontend-dev.devopsblessed.store, roboshop.yml -e role_name=frontend -e ansible_user=centos -e ansible_password=DevOps321
+
+

@@ -29,3 +29,7 @@
     state: restarted
     name: nginx
     enabled: true
+
+
+
+    ##syntax ansible-playbook  -i frontend-dev.devopsblessed.store, roboshop.yml -e role_name=frontend -e ansible_user=centos -e ansible_password=DevOps321
