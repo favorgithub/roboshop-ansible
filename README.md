@@ -84,4 +84,13 @@ YAML
 things to know
 1. How do you declara variable in ansible
 2. We have NFs in our config cos we want to keep the code dry but how do we call these nfs in our ansible
-3. 
+3. We use include task list in plays, declare variable, roles
+
+# Roles
+# Roles let you automatically load related vars, files, tasks, handlers, and other Ansible artifacts based on a known file structure. After you group your content in roles, you can easily reuse them and share them with other users.)
+
+# Using roles
+# You can use roles in three ways:
+# at the play level with the roles option: This is the classic way of using roles in a play.
+# at the tasks level with include_role: You can reuse roles dynamically anywhere in the tasks section of a play using include_role.
+# at the tasks level with import_role: You can reuse roles statically anywhere in the tasks section of a play using import_role.
