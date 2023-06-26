@@ -5,3 +5,8 @@
     - frontend
 
 
+
+
+
+
+##[ centos@workstation ~/roboshop-ansible ]$ ansible-playbook -i frontend-dev.devopsblessed.store, frontend.yml -e ansible_user=centos -e ansible_password=DevOps321

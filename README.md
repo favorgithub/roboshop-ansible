@@ -72,3 +72,11 @@ Install Ansible
 
 
 ##In the workstation server - sudo labauto ansible
+
+YAML
+1. Indentation is the way of YAML inputs provided
+2. Always use uniform spacing
+3. Tab space are not allowed
+4. Based on the program you are dealing, keys are provided by program and we have to fill those values as per our requirements
+5. same cases we create our own keys mainly variables
+6. some cases the values also will be provided and we have to choose only one of them
