@@ -9,5 +9,6 @@
 
 
 ## He called this main.yml file
+##this is the playbook, the idea is to have 1 yaml file play book and the roles to load the things
 
 
