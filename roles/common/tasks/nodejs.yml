@@ -11,6 +11,34 @@
     file: app_presetup.yml
 
 
+- name: Load NodeJS Dependencies
+  ansible.builtin.shell: npm install
+  args:
+      chdir: /app
+
+- name: SystemD Setup`
+  ansible.builtin.import_tasks:
+    file: systemd_setup.yml
+
+
+Syntax for load nodejs
+#- - name: Change the working directory to somedir/ before executing the command
+#    ansible.builtin.shell: somescript.sh >> somelog.txt
+#    args:
+#      chdir: somedir/
+
+# here we used curly braces in the variable component because there is a value in front of the variable
+## in the app that uses the nodejs we will declare a variable as component
+
+
+#  nodejs() {
+#  echo -e "${color} Configuring NodeJS Repos ${nocolor}"
+#  curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file
+#  stat_check $?
+#
+#  echo -e "${color} install NodeJS ${nocolor}"
+#  yum install nodejs -y &>>$log_file
+#  stat_check $?
 #
 #  app_presetup
 #
@@ -19,3 +47,12 @@
 #  stat_check $?
 #
 #  systemd_setup
+#
+#}
+
+
+
+#syntax to import task
+#- name: Include task list in play
+#      ansible.builtin.import_tasks:
+#        file: stuff.yaml

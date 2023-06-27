@@ -16,5 +16,7 @@
 
 # the import role is picking up based on the file name only node.js
 
+## ansible-playbook  -i catalogue-dev.devopsblessed.store, roboshop.yml -e role_name=catalogue -e ansible_user=centos -e ansible_password=DevOps321
+
 
 
