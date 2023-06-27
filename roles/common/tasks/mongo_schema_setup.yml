@@ -9,7 +9,7 @@
     name: mongodb-org-shell
     state: installed
 
-- name: Load Schema
+- name: Load Schema Setup
   ansible.builtin.shell: mongo --host mongodb-dev.devopsblessed.store </app/schema/{{ component }}.js
 
 
