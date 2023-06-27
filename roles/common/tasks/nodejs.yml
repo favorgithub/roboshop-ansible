@@ -14,7 +14,7 @@
 - name: Load NodeJS Dependencies
   ansible.builtin.shell: npm install
   args:
-    somedir: /app
+    chdir: /app
 
 - name: SystemD Setup`
   ansible.builtin.import_tasks:
