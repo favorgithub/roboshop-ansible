@@ -10,6 +10,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+## all the config are in the common file
+
 ##syntax to import a role used above
 #- name: Run tasks/other.yaml instead of 'main'
 #    ansible.builtin.import_role:
