@@ -50,7 +50,7 @@
   ansible.builtin.systemd:
     name: redis
     state: restarted
-    enables: yes
+    enabled: yes
 
 
 
