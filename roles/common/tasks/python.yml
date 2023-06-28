@@ -11,7 +11,7 @@
     file: app_presetup.yml
 
 - name: Install Application Dependencies
-  ansible.builtin.shell:  pip3.6 install -r requirements.txt
+  ansible.builtin.shell: pip3.6 install -r requirements.txt
   args:
     chdir: /app
 
