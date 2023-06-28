@@ -1,0 +1,55 @@
+- name: Configure Erlang Repos
+  ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
+
+- name: Configure Rabbitmq Repos
+  ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
+
+- name: Install RabbitMQ Server
+  ansible.builtin.systemd:
+    name: rabbitmq-server
+    state: installed
+
+- name: Start Rabbitmq Server
+  ansible.builtin.systemd:
+    name: rabbitmq-server
+    state: restarted
+    enabled: yes
+
+- name: Add Application User
+  community.rabbitmq.rabbitmq_user:
+    user: roboshop
+    password: roboshop123
+    vhost: /
+    configure_priv: .*
+    read_priv: .*
+    write_priv: .*
+    state: present
+
+
+
+
+
+#source common.sh
+#
+#echo -e "${color}  ${nocolor} "
+#curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash &>>/tmp/roboshop.log
+#stat_check $?
+#
+#echo -e " ${color} Configure Rabbitmq Repos ${nocolor} "
+#curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash &>>/tmp/roboshop.log
+#stat_check $?
+#
+#echo -e " ${color} Install RabbitMQ ${nocolor} "
+#yum install rabbitmq-server -y &>>/tmp/roboshop.log
+#stat_check $?
+#
+#
+#echo -e " ${color} Start RabbitMQ Service ${nocolor} "
+#systemctl enable rabbitmq-server &>>/tmp/roboshop.log
+#systemctl restart rabbitmq-server &>>/tmp/roboshop.log
+#stat_check $?
+#
+#echo -e " ${color} Add Rabbitmq Application User ${nocolor} "
+#rabbitmqctl add_user roboshop $1 &>>/tmp/roboshop.log
+#rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>/tmp/roboshop.log
+#stat_check $?
