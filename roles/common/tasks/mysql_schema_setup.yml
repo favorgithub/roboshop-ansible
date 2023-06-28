@@ -1,0 +1,22 @@
+- name: Install MySQL Client
+  ansible.builtin.yum:
+    name: mysql
+    state: installed
+
+- name: Load Schema
+  ansible.builtin.shell: mysql -h mysql-dev.devopsblessed.store -uroot -pRoboshop@1 </app/schema/{{ component }}.js
+
+
+
+
+#echo -e "${color} Copy Mongodb.repo ${nocolor}"
+#cp /home/centos/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo &>>$log_file
+#stat_check $?
+#
+#echo -e "${color}Install Mongodb Client ${nocolor}"
+#yum install mongodb-org-shell -y &>>$log_file
+#stat_check $?
+#
+#echo -e "${color} Load Schema ${nocolor}"
+#mongo --host mongodb-dev.devopsblessed.store <${app_path}/schema/${component}.js &>>$log_file
+#stat_check $?
