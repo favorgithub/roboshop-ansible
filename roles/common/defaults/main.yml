@@ -1,0 +1,50 @@
+load_schema: false
+
+
+
+##defaults is the least priority variable
+## who ever has given their variable as load_schema is true will override this variable
+## when you don't want your variable to fail at any cost, you need the bare minimum the basic value  to function
+## it should not fail saying the variable does not exists
+## it should pick this default variable which is the least priority variable
+## if vars is true it will overide this variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  roles/
+#  common/               # this hierarchy represents a "role"
+#  tasks/            #
+#  main.yml      #  <-- tasks file can include smaller files if warranted
+#  handlers/         #
+#  main.yml      #  <-- handlers file
+#  templates/        #  <-- files for use with the template resource
+#  ntp.conf.j2   #  <------- templates end in .j2
+#  files/            #
+#  bar.txt       #  <-- files for use with the copy resource
+#  foo.sh        #  <-- script files for use with the script resource
+#  vars/             #
+#  main.yml      #  <-- variables associated with this role
+#  defaults/         #
+#  main.yml      #  <-- default lower priority variables for this role
+#  meta/             #
+#  main.yml      #  <-- role dependencies
+#  library/          # roles can also include custom modules
+#  module_utils/     # roles can also include custom module_utils
+#  lookup_plugins/   # or other types of plugins, like lookup in this case
+#
+#  webtier/              # same kind of structure as "common" was above, done for the webtier role
+#  monitoring/           # ""
+#  fooapp/               # ""
